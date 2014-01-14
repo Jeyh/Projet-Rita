@@ -16,8 +16,11 @@ body
 #header a
 {
 	display: block;
-	height: 221px;
+	height: 249px;
 	width: 856px;
+	padding-left : 32px;
+	padding-right : 32px;
+
 	
 	
 	
