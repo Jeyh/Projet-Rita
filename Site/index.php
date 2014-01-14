@@ -15,28 +15,17 @@
 	
 	
 	<div id="conteneur">
-		<div id="header"><a href='index.html'></a></div>
+		<div id="header"><a href='index.php'></a></div>
 		
 		<div id="menu">
-		<a href='index.html'>Accueil</a> <a href='index.html'>Liste</a> <a href='index.html'>Rechercher</a>
+		<a href='index.php'>Accueil</a> <a href='index.html'>Liste</a> <a href='index.html'>Rechercher</a>
 		</div>
 		
 		<div id="corps">
-		Blablablablalbalblablalbal Blablablablalbalblablalbal aaa a a a a a  a a a a aaaaa 
-		aaaaaaaa a  a aaaaaaaaaaa aaaaaaa aaaaaaaaaaa aaaaaaa aaaaaaaaaa  aaaaaaaaaaaa  aaaaa
-		Blablablablalbalblablalbal Blablablablalbalblablalbala aaaaa aaaaa aaaaaaaa aaaa
-		Blablablablalbalblablalbal Blablablablalbalblablalbalaa aaaa a aaaaaa a aaaaaaaaa
-		Blablablablalbalblablalbal Blablablablalbalblablalbal  aaaaaa aaaaa
-		Blablablablalbalblablalbal Blablablablalbalblablalbalaa aaaaa aaa aaaaa aaaa aaaa
-		Blablablablalbalblablalbal Blablablablalbalblablalbala aaa aaaaaaa aaaaaaa aaaaaa
-		Blablablablalbalblablalbal Blablablablalbalblablalbala aaaaaaaaaaa aaaaaaaaaaaaa aaa 
-		Blablablablalbalblablalbal Blablablablalbalblablalbal aaaaa aaaaaaa aaaaaaaaaa aaaaaaaaa 
-		Blablablablalbalblablalbal Blablablablalbalblablalbal aaaaaaaaaaa aaaaaa aaaaaaa a  aaaaaaaaa
-		ablablalbalblablalbal Blablablablalbalblablalbalaa aaaaa aaa aaaaa aaaa aaaa
-		Blablablablalbalblablalbal Blablablablalbalblablalbala aaa aaaaaaa aaaaaaa aaaaaa
-		Blablablablalbalblablalbal Blablablablalbalblablalbala aaaaaaaaaaa aaaaaaaaaaaaa aaa 
-		Blablablablalbalblablalbal Blablablablalbalblablalbal aaaaa aaaaaaa aaaaaaaaaa aaaaaaaaa 
-		Blablablablalbalblablalbal Blablablablalbalblablalbal aaaaaaaaaaa aaaaaa aaaaaaa a  aaaaaaaaa
+			<a href="vehicule.php"><img id ="vehicule" src="./images/vehicule.jpg" width=" 300px"	height=" 300px" top="20px"></a>
+			<a href="electronique.php"><img id="electronique" src="./images/electronique.jpg" width=" 300px"	height=" 300px"></a>
+			<a href="mobilier.php"><img id="mobilier" src="./images/mobilier.jpg" width=" 300px"	height=" 300px"></a>
+			<a href="divertissement.php"><img id="divertissement" src="./images/divertissement.jpg" width=" 300px"	height=" 300px"></a> 
 		</div>
 		
 		<div id="footer">

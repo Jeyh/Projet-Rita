@@ -5,9 +5,9 @@
 		<link rel="stylesheet" media="screen" type="text/css" href="styles/main.css" />
 	</head>
 	<div id="conteneur">
-		<div id="header"><a href='index.html'></a></div>
+		<div id="header"><a href='index.php'></a></div>
 		<div id="menu">
-		<a href='index.html'>Accueil</a> <a href='index.html'>Liste</a> <a href='index.html'>Rechercher</a>
+		<a href='index.php'>Accueil</a> <a href='index.html'>Liste</a> <a href='index.html'>Rechercher</a>
 		</div>
 		<div id="corps">
 			
