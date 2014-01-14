@@ -7,12 +7,8 @@
 	</head>
 
 	<body>
-		<?php include("entete.php"); ?>
-		
-		<?php include("menu.php"); ?>
 		
 		<?php include("barre_de_recherche.php"); ?>
-		
 		
 		<div id ="articles">
 			<div id ="article">
@@ -34,7 +30,7 @@
 						
 						$requete = htmlspecialchars($_POST['requete']);
 						
-						$req = $bd->prepare("SELECT * FROM objets WHERE titre LIKE ?");
+						$req = $bd->prepare("SELECT * FROM test WHERE titre LIKE ?");
 						$req->execute(array($r.'%'));
 
 						$nb_resultats = $req->rowCount();
@@ -47,7 +43,7 @@
 							while($donnees = $req->fetch()) 
 							{
 								?>
-								<a href="anime.php?id=<?php echo $donnees['id']; ?>"><?php echo $donnees['titre']; ?></a><br/><br/>
+								<a href="index.php?id=<?php echo $donnees['id']; ?>"><?php echo $donnees['titre']; ?></a><br/><br/>
 								<?php
 							}
 						}
