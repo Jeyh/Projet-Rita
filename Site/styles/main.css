@@ -80,6 +80,26 @@ padding-top: 35px;
 	color: #c48a2c;
 }
 
+#vehicule
+{
+	margin: 20px 25px 20px 90px ;
+}
+
+#electronique
+{
+	margin: 20px 90px 20px 25px ;
+}
+
+#mobilier
+{
+	margin: 20px 25px 20px 90px ;
+}
+
+#divertissement
+{
+	margin: 20px 90px 20px 25px ;
+}
+
 #conteneur
 {
 	margin: auto;
