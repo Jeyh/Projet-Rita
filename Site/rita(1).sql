@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Lun 13 Janvier 2014 à 14:44
+-- Généré le: Mar 14 Janvier 2014 à 09:46
 -- Version du serveur: 5.6.12-log
 -- Version de PHP: 5.4.12
 
@@ -25,14 +25,39 @@ USE `rita`;
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `categorieprincipale`
+--
+
+CREATE TABLE IF NOT EXISTS `categorieprincipale` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `Nom` varchar(255) NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `modele`
 --
 
 CREATE TABLE IF NOT EXISTS `modele` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `Nom` int(11) NOT NULL,
-  `Genre` int(11) NOT NULL,
+  `SousCategorie` int(11) NOT NULL,
   `Reference` int(11) NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `souscategorie`
+--
+
+CREATE TABLE IF NOT EXISTS `souscategorie` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `Nom` varchar(255) NOT NULL,
+  `CategoriePrincipale` int(11) NOT NULL,
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
