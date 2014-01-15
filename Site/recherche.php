@@ -8,8 +8,6 @@
 
 	<body>
 		
-		<?php include("barre_de_recherche.php"); ?>
-		
 		<div id ="articles">
 			<div id ="article">
 				<div id ="titre">
@@ -38,7 +36,7 @@
 						if($nb_resultats != 0)
 						{
 							?>
-							<h3> Objets : </h3>
+							<h3>  : </h3>
 							<?php
 							while($donnees = $req->fetch()) 
 							{
@@ -49,11 +47,7 @@
 						}
 						else
 							echo "Aucun objet ne correspondant a votre recherche <br/><br/>";
-							
-
 					}	
-					//else 
-						//echo "Entrer une recherche";
 				?>
 			</div>
 		</div>
