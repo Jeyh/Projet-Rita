@@ -59,7 +59,7 @@
 							while($donnees = $req->fetch()) 
 							{
 							?>
-								<a href="index.php?id=<?php echo $donnees['id']; ?>"><?php echo $donnees['titre']; ?></a><br/><br/>
+								<a href="fichemodele.php?id=<?php echo $donnees['id']; ?>"><?php echo $donnees['titre']; ?></a><br/><br/>
 							<?php
 							}
 						}
