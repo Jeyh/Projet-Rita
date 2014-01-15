@@ -11,9 +11,6 @@
 	
 	<body>
 	
-	<?php include("recherche.php"); ?>
-	
-	
 	<div id="conteneur">
 		<div id="header"><a href='index.php'></a></div>
 		

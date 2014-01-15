@@ -2,17 +2,35 @@
 
 <html>
 	<head>
-		<title>Nom du site - Resultat de recherche</title>
-		<link rel="stylesheet" href="cssaccueil.css">
-	</head>
-
-	<body>
+	
+		<title>Projet Tuteuré Rita</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<link rel="stylesheet" media="screen" type="text/css" href="styles/main.css" />
 		
-		<div id ="articles">
-			<div id ="article">
-				<div id ="titre">
-					<!--Résultats correspondant à votre recherche : !-->
+	</head>
+	
+	<body>
+	
+	
+	
+	
+	<div id="conteneur">
+		<div id="header"><a href='index.php'></a></div>
+		
+		<div id="menu">
+		<a id ="accueil" href='index.php'>Accueil</a>
+			<div id="recherche">
+				<div id="text">
+					<form action="recherche.php" method="Post">
+						<input type="text" name="requete">
+						<input type="submit" id="bouton_recherche" value="Recherche">						
+					</form>
 				</div>
+			</div>
+		<a id= "liste" href='index.html'>Liste</a> 
+		</div>
+		
+		<div id="corps">
 				<?php
 					if(isset($_POST['requete']) && $_POST['requete'] != NULL)	
 					{
@@ -35,22 +53,23 @@
 
 						if($nb_resultats != 0)
 						{
-							?>
-							<h3>  : </h3>
+				?>
+							Resultat correspondant à votre recherche : </br></br>
 							<?php
 							while($donnees = $req->fetch()) 
 							{
-								?>
+							?>
 								<a href="index.php?id=<?php echo $donnees['id']; ?>"><?php echo $donnees['titre']; ?></a><br/><br/>
-								<?php
+							<?php
 							}
 						}
 						else
 							echo "Aucun objet ne correspondant a votre recherche <br/><br/>";
 					}	
-				?>
-			</div>
+							?>		
 		</div>
-		
-	</body>
+		<div id="footer">
+		The IUT Copyright - Tous droits réservés © 2013-2014
+		</div>
+		</div>
 </html>
