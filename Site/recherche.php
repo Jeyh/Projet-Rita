@@ -13,7 +13,7 @@
 		<div id ="articles">
 			<div id ="article">
 				<div id ="titre">
-					Résultats correspondant à votre recherche : 
+					<!--Résultats correspondant à votre recherche : !-->
 				</div>
 				<?php
 					if(isset($_POST['requete']) && $_POST['requete'] != NULL)	
@@ -52,8 +52,8 @@
 							
 
 					}	
-					else 
-						echo "Entrer une recherche";
+					//else 
+						//echo "Entrer une recherche";
 				?>
 			</div>
 		</div>

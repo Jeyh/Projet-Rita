@@ -105,3 +105,21 @@ padding-top: 35px;
 	margin: auto;
 	width: 919px;
 }
+
+#accueil
+{
+	float:left;
+	padding-left: 50px;
+}
+
+#liste
+{
+	float:left;
+	padding-left: 200px;
+}
+
+#recherche
+{
+	float: left;
+	margin-left : 200px;
+}
