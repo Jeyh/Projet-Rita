@@ -33,8 +33,16 @@
 			
 			$Cat=-1; 
 			
-			$result = $bd->query("SELECT * FROM `categorie` WHERE `IDCat` = ".$Cat." ");
-			var_dump ($result);
+			$result = $bd->query("SELECT * FROM `modele`  ORDER BY `nom`");
+			
+			while ($data = $result-> fetch() )
+			{	
+				//echo '<a href="'.$data['URL'].'">';
+				?>
+				<a href="fichemodele.php?id=<?php echo $data['Nom']; ?>"><?php echo $data['Nom']; ?></a>
+				<?php
+				echo '<br>';
+			}
 			
 			
 			

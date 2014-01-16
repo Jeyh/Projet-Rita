@@ -34,20 +34,23 @@
 				<?php
 					if(isset($_POST['requete']) && $_POST['requete'] != NULL)	
 					{
-						$r = $_POST['requete'];
 						try
 						{
 							$bd= new PDO('mysql:host=localhost;dbname=rita', 'root', '');
 						}
 						catch (Exception $e)
 						{
-								die('Erreur : ' . $e->getMessage());
+							die('Erreur : ' . $e->getMessage());
 						}
 						
 						$requete = htmlspecialchars($_POST['requete']);
+
+						$req = $bd->prepare("SELECT * FROM `modele` WHERE `Nom` LIKE :nom ORDER BY `Nom`");
 						
-						$req = $bd->prepare("SELECT * FROM test WHERE titre LIKE ?");
-						$req->execute(array($r.'%'));
+						$r = '%'.$_POST['requete'].'%';
+						$req->bindparam(':nom', $r, PDO::PARAM_STR);
+						
+						$req->execute();
 
 						$nb_resultats = $req->rowCount();
 
@@ -59,7 +62,7 @@
 							while($donnees = $req->fetch()) 
 							{
 							?>
-								<a href="fichemodele.php?id=<?php echo $donnees['id']; ?>"><?php echo $donnees['titre']; ?></a><br/><br/>
+								<a href="fichemodele.php?id=<?php echo $donnees['Nom']; ?>"><?php echo $donnees['Nom']; ?></a><br/>
 							<?php
 							}
 						}
