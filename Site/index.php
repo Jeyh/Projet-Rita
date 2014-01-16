@@ -12,7 +12,20 @@
 	<body>
 	
 	<div id="conteneur">
-	<?php include("menu.php"); ?>
+		<div id="header"><a href='index.php'></a></div>
+		
+		<div id="menu">
+		<a id ="accueil" href='index.php'>Accueil</a>
+			<div id="recherche">
+				<div id="text">
+					<form action="recherche.php" method="Post">
+						<input type="text" name="requete">
+						<input type="submit" id="bouton_recherche" value="Recherche">						
+					</form>
+				</div>
+			</div>
+		<a id= "liste" href='index.html'>Liste</a> 
+		</div>
 		
 		<div id="corps">
 			<a href="vehicule.php"><img id ="vehicule" src="./images/Categories/vehicule.jpg" width=" 300px"	height=" 300px" top="20px"></a>
