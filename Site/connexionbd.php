@@ -4,7 +4,7 @@
 	$bd = false;
 	try
 	{
-		 $bd= new PDO('mysql:host=localhost;dbname=estivsolvignon_site', 'root', '');
+		 $bd= new PDO('mysql:host=localhost;dbname=rita', 'root', '');
 
 	}
 	catch (Exception $e)
