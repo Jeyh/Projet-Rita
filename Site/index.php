@@ -28,10 +28,10 @@
 		</div>
 		
 		<div id="corps">
-			<a href="vehicule.php"><img id ="vehicule" src="./images/vehicule.jpg" width=" 300px"	height=" 300px" top="20px"></a>
-			<a href="electronique.php"><img id="electronique" src="./images/electronique.jpg" width=" 300px"	height=" 300px"></a>
-			<a href="mobilier.php"><img id="mobilier" src="./images/mobilier.jpg" width=" 300px"	height=" 300px"></a>
-			<a href="divertissement.php"><img id="divertissement" src="./images/divertissement.jpg" width=" 300px"	height=" 300px"></a> 
+			<a href="vehicule.php"><img id ="vehicule" src="./images/Categories/vehicule.jpg" width=" 300px"	height=" 300px" top="20px"></a>
+			<a href="electronique.php"><img id="electronique" src="./images/Categories/electronique.jpg" width=" 300px"	height=" 300px"></a>
+			<a href="mobilier.php"><img id="mobilier" src="./images/Categories/mobilier.jpg" width=" 300px"	height=" 300px"></a>
+			<a href="divertissement.php"><img id="divertissement" src="./images/Categories/divertissement.jpg" width=" 300px"	height=" 300px"></a> 
 		</div>
 		
 		<div id="footer">
