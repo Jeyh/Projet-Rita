@@ -1,40 +1,35 @@
-<!DOCTYPE html>
-
-<html>
-	<head>
+<?php
+	include "header.php";
+	include "menu.php";
+	include "connexionbd.php";
+?>
 	
-		<title>Projet Tuteuré Rita</title>
-		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-		<link rel="stylesheet" media="screen" type="text/css" href="styles/main.css" />
-		<?php include ("connexionbd.php"); ?>
-	</head>
-	
-	<body>
-	
-	<div id="conteneur">
-		<div id="header"><a href='index.php'></a></div>
-		
-		<div id="menu">
-		<a id ="accueil" href='index.php'>Accueil</a>
-			<div id="recherche">
-				<div id="text">
-					<form action="recherche.php" method="Post">
-						<input type="text" name="requete">
-						<input type="submit" id="bouton_recherche" value="Recherche">						
-					</form>
-				</div>
-			</div>
-		<a id= "liste" href='Liste.php'>Liste</a> 
-		</div>
-		
 		<div id="corps">
 			
 			<?php
+				if (isset ($_GET['choice']))
+				{
+					$req="SELECT *	FROM `categorie`	WHERE `IDCat` =".$_GET['choice'];
+					$res=$bd->query($req);
+					While ( $data = $res -> fetch (PDO::FETCH_ASSOC))
+					{
+						echo "<a href='index.php?choice=".$data['ID']."'><img src='".$data['Image']."' width='300px' height='300px'/></a>";
+						echo "<a/>";
+
+					}
+					$res->closeCursor();
+					
+					$req="SELECT * FROM `modele` WHERE `IDCatM` = '".$_GET['choice']."'";
+					$res=$bd->query($req);
+					While ( $data = $res -> fetch (PDO::FETCH_ASSOC))
+					{
+						echo "<a href='fichemodele.php?choice=".$data['ID']."'>".$data['Nom']."</a>";
+						echo "<br/>";
+					}
+					
+				}
+				
 			
-			$Cat=-1; 
-			
-			$result = $bd->query("SELECT * FROM `categorie` WHERE `IDCat` = ".$Cat." ");
-			var_dump ($result);
 			
 			
 			
@@ -42,10 +37,6 @@
 			<!--<a href="divertissement.php"><img id="divertissement" src="./images/Categories/divertissement.jpg" width=" 300px"	height=" 300px"></a> -->
 		</div>
 		
-		<div id="footer">
-		The IUT Copyright - Tous droits réservés © 2013-2014
-		</div>
-	</div>
-
-	</body>
-</html>
+<?php
+	include "footer.php";
+?>

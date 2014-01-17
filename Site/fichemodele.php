@@ -1,62 +1,27 @@
-<!DOCTYPE html>
-
-<html>
-	<head>
-	
-		<title>Fiche du Modele</title>
-		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-		<link rel="stylesheet" media="screen" type="text/css" href="styles/main.css" />
-		
-	</head>
-	
-	<body>
-	<?php include ("connexionbd.php"); ?>
-	<?php
-			//reception
-		$id=$_GET["id"];			
-	?>	
-	<div id="conteneur">
-		<div id="header"><a href='index.php'></a></div>
-		
-		<div id="menu">
-		<a id ="accueil" href='index.php'>Accueil</a>
-			<div id="recherche">
-				<div id="text">
-					<form action="recherche.php" method="Post">
-						<input type="text" name="requete">
-						<input type="submit" id="bouton_recherche" value="Recherche">						
-					</form>
-				</div>
-			</div>
-		<a id= "liste" href='index.html'>Liste</a> 
-		</div>
+<?php
+	include "header.php";
+	include "menu.php";
+ 
+	include ("connexionbd.php");		
+?>	
 		
 		<div id="corps">
-			<div>
-			Titre :
-			</div>
-			<div>
-			<center>
-				<?php
-					$image = $bd->query("SELECT modele FROM test WHERE id=$id");
-					$img = $image->fetch();
-					printf($img["modele"]);
-				?>
-			</br>
-			</center>
-			</div>
-			Description du fichier( auteurs ect... nbre polys...): </br>
-			Jo le roi de la frite.
-			</br>
-
+		
+		<?php
+			if(isset($_GET['choice']))
+			{
+				$result = $bd->query("SELECT * FROM `modele`  WHERE `ID` = ".$_GET['choice']);
+				while ( $data = $result -> fetch (PDO::FETCH_ASSOC))
+				{
+					echo "<img src='".$data['screen']."' />";
+					echo "<br/>";
+				}
+				$result->closeCursor();
+			}
+		?>
 		</div>
 		
 		
-		
-		<div id="footer">
-		The IUT Copyright - Tous droits réservés © 2013-2014
-		</div>
-	</div>
-
-	</body>
-</html>
+<?php
+	include "footer.php";
+?>

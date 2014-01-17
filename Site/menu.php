@@ -1,10 +1,10 @@
 <body>
 
 <div id="conteneur">
-		<div id="header"><a href='index.php'></a></div>
+		<div id="header"><a href='index.php?choice=-1'></a></div>
 		
 		<div id="menu">
-		<a id ="accueil" href='index.php'>Accueil</a>
+		<a id ="accueil" href='index.php?choice=-1'>Accueil</a>
 				<div id="recherche">
 						<div id="text">
 								<form action="recherche.php" method="Post">
@@ -13,5 +13,5 @@
 								</form>
 						</div>
 				</div>
-		<a id= "liste" href='index.html'>Liste</a>
+		<a id= "liste" href='Liste.php'>Liste</a>
 		</div>
