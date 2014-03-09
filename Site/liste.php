@@ -1,6 +1,7 @@
 <?php
 	include "header.php";
 	include "menu.php";
+	include ("connexionbd.php");
 ?>
 		
 		<div id="corps">
@@ -13,7 +14,7 @@
 			{	
 				//echo '<a href="'.$data['URL'].'">';
 				?>
-				<a href="fichemodele.php?id=<?php echo $data['Nom']; ?>"><?php echo $data['Nom']; ?></a>
+				<a href="fichemodele.php?choice=<?php echo $data['ID']; ?>"><?php echo $data['Nom']; ?></a>
 				<?php
 				echo '<br>';
 			}
