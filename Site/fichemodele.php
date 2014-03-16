@@ -15,6 +15,7 @@
 				{
 					echo "<img src='".$data['screen']."' />";
 					echo "<br/>";
+					echo"<a href='".$data['URL']."'/> telecharger </a>"; ;
 				}
 				$result->closeCursor();
 			}
