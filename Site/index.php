@@ -13,8 +13,12 @@
 					$res=$bd->query($req);
 					While ( $data = $res -> fetch (PDO::FETCH_ASSOC))
 					{
-						echo "<a href='index.php?choice=".$data['ID']."'><img src='".$data['Image']."' width='300px' height='300px'/></a>";
+						echo "<a href='index.php?choice=".$data['ID']."'><img src='".$data['Image']."' width='300px' height='300px' margin='40px'/></a>";
 						echo "<a/>";
+						echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+						echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+						echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+						echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 
 					}
 					$res->closeCursor();
